@@ -122,7 +122,7 @@
   window.addEventListener('load', () => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
-        scrollto(window.location.hash)
+        window.scrollTo({ top: select(window.location.hash).offsetTop, behavior: 'instant' })
       }
     }
   });
